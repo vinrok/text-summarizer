@@ -1,7 +1,7 @@
 import streamlit as st
 from transformers import pipeline
-import gradio as gr
-from gradio.mix import Parallel, Series
+# import gradio as gr
+# from gradio.mix import Parallel, Series
 
 @st.cache(allow_output_mutation=True)
 def summarize_model():
@@ -9,6 +9,7 @@ def summarize_model():
     return model
 
 summ = summarize_model()
+
 st.title("Text Summarizer")
 st.subheader("Paste any article in the text area below and get the summary by clicking on 'Summarize Text' button")
 st.caption("Text summarization using HuggingFace's transformers pre-trained model")
