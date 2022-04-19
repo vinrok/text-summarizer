@@ -6,7 +6,7 @@ def summarize_model():
     return model
 summ = summarize_model()
 st.title("Text Summarizer")
-st.sub_header("Paste any article in the text area below and get the summary by clicking on 'Summarize Text' button")
+st.subheader("Paste any article in the text area below and get the summary by clicking on 'Summarize Text' button")
 st.caption("Text summarization using HuggingFace's transformers pre-trained model")
 sentence = st.text_area('Paste your copied data here...', height=100)
 button = st.button("Summarize Text")
