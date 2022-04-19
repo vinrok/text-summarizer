@@ -5,9 +5,9 @@ def summarize_model():
     model = pipeline("summarization")
     return model
 summ = summarize_model()
-st.title("Summarize Your Text")
-st.subheader("Paste any article in the text area below and click on the 'Summarize Text' button to get the summarized textual data")
-st.subheader("This application is using HuggingFace's transformers pre-trained model for text summarization.")
+st.title("Text Summarizer")
+st.sub_header("Paste any article in the text area below and get the summary by clicking on 'Summarize Text' button")
+st.caption("Text summarization using HuggingFace's transformers pre-trained model")
 sentence = st.text_area('Paste your copied data here...', height=100)
 button = st.button("Summarize Text")
 max_lengthy = st.sidebar.slider('Maximum summary length (words)', min_value=30, max_value=700, value=100, step=10)
