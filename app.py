@@ -25,8 +25,9 @@ num_beamer = st.sidebar.slider('Speed vs quality of Summary (1 is fastest but le
 with st.spinner("Summarizing..."):
     if button and sentence:
         summary = summ(sentence, max_length = max_lengthy, min_length = 50, num_beams=num_beamer, do_sample=True,early_stopping=True, repetition_penalty=1.5, length_penalty=1.5)[0]
-        with col2:
-		st.write(summary['summary_text'])
+
+with col2:
+	st.write(summary['summary_text'])
 
 
 # io1 = gr.Interface.load('huggingface/facebook/bart-large-cnn')
@@ -44,7 +45,7 @@ with st.spinner("Summarizing..."):
 # z = """Judith Eisler has created a small nominal Painting on Oil on canvas in the modern year of 2020.0 Judith Eisler b 1962 Newark NJ presents Faye a new oil painting depicting the actress Faye Dunaway adapted from the widely acclaimed satirical motion picture Network 1976 written by Paddy Chayefsky and directed by Sidney Lumet Eisler has recently expanded her source material to include contemporary imagery appropriated from politics sports and entertainment however in Faye she returns to her longstanding practice of painting cinematic close ups taken from stills from classic 1960s and 1970s films In Network Dunaway portrays Diana Christensen a producer for the fictional television network UBS who devises increasingly dramatic performances for a veteran news anchorman Howard Beale played by Peter Finch in an effort to increase ratings Eisler s portrait is tightly cropped zoomed in on Dunaway s face and framed by coiffed brunette curls The artist playfully draws connections between the film s title and the mediums of television screens and social media Eisler skillfully incorporates the pixelated striations that often occur when photographing TV monitors revealing the multi step process involved in the creation of painting film stills These striations are a result of a moir pattern a large scale interference pattern that occurs when photographing a television screen a failure of video pixels to coordinate with the screen s display These distorted bands of red and blue light sweep across Dunaway s visage mapping her intensely focused gaze 
 # """
 
-# sample = [[w],[x],[x],[z]]
+# sample = [[w],[x],[y],[z]]
 
 # iface = Parallel(io1, 
 #                  theme='peach', 
