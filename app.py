@@ -23,7 +23,7 @@ num_beamer = st.sidebar.slider('Speed vs quality of Summary (1 is fastest but le
 with st.spinner("Summarizing..."):
     if button and sentence:
         summary = summ(sentence, max_length = max_lengthy, min_length = 50, num_beams=num_beamer, do_sample=True,early_stopping=True, repetition_penalty=1.5, length_penalty=1.5)[0]
-	st.write(summary['summary_text'])
+        st.write(summary['summary_text'])
 
 
 # io1 = gr.Interface.load('huggingface/facebook/bart-large-cnn')
